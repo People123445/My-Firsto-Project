@@ -1,0 +1,484 @@
+.nav-container {
+    width: 100%;
+    height: 35px;
+    background-image: url("Images/Navbar.png");
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row-reverse;
+    overflow-y: hidden;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif !important;
+    overflow-x: hidden;
+}
+
+.nav-profile {
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav ul {
+    height: 30px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    gap: 60px;
+    padding-right:10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    transition: .3s;
+}
+
+nav ul li a:hover{
+    color:  white;
+    padding-left: 3px;
+}
+
+.nav-img {
+    width: 285px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-container {
+    width: 100%;
+    height: 80vh;
+    background-image: url(Images/brian-fathurohman-dPoNxtkaz0Q-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Wajib ditambahkan */
+    overflow: hidden;
+}
+
+/* Membuat lapisan overlay hijau */
+.home-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #053a10; /* Warna hijau kamu */
+    opacity: 0.6; /* Tingkat transparansi overlay */
+    z-index: 1;
+}
+
+/* Memastikan konten/teks di dalamnya tetap berada di atas overlay */
+.home-container * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.home-txt-container {
+    width: 33%;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content:  flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.home-txt-container h1 {
+    color: white;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.home-sub-up {
+    width: 100px;
+    height: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.265);
+   border-top-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   font-size: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   margin-top: 10px;
+}
+
+.home-sub-down {
+    width: 100%;
+    height: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.home-button {
+    width: 200px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgb(3, 122, 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.home-button:active {
+    background-color: black !important;
+    color: white;
+}
+
+.home-button a:active{
+    color: white;
+}
+
+.home-button img {
+    width: 15px;
+    height: 15px;
+}
+
+.home-button {
+    text-decoration: none;
+    color: black;
+}
+
+.home-button:hover {
+    background-color: rgba(0, 0, 0, 0.194);
+}
+
+.menu-container {
+    width: 100%;
+    height: 180vh;
+    border: 1px solid;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.menu-title {
+    font-size: 27px; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;  
+    margin-top: 50px;    
+}
+
+.menu-title::after {
+    content:"";
+    display: block;
+    width:  340px;
+    height: 6px;
+    background: #73B925;   
+}
+
+.maincourse-title {
+    width: 100%;
+    height: 65vh;
+    font-size: 29px;
+    padding-left: 50px;
+    padding-top: 16px;
+    margin-top: 50px;
+}
+
+.maincourse-title h3::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 4px;
+    background: #73B925;
+}
+
+.maincourse-container {
+    width: 100%;
+    height: 77%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+
+.menu-cart-ayambakar, .menu-cart-serombotan, 
+.menu-cart-ayamgoreng {
+    width: 25%;
+    height: 250px;
+    border-radius: 10px;
+    border: 3px solid;
+    box-shadow: 1px 2px 3px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.menu-cart-ayambakar img, .menu-cart-serombotan img,
+.menu-cart-ayamgoreng img {
+    width: 100%;
+    height: 72%;
+}
+
+.menu-cart-ayambakar-sub, .menu-cart-serombotan-sub, 
+.menu-cart-ayamgoreng-sub {
+    width: 100%;
+    height: 25%;
+    border-top: 1px solid;
+    padding-left: 17px;
+    font-size: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-ayam, .title-serombotan,
+.title-ayamgoreng {
+    width: 300px;
+    height: 100%;
+}
+
+.price-ayam, .price-serombotan, 
+.price-ayamgoreng {
+    width: 100px;
+    height: 100%;
+    font-size: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jajan-title {
+    width: 100%;
+    height: 67vh;
+    font-size: 30px;
+    padding-left: 50px;
+    padding-top: 16px;
+    margin-top: 50px;
+}
+
+.jajan-title h3::after {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 5px;
+    background: #73B925;
+    margin-left: 2px;
+}
+
+.jajan-container {
+    width: 100%;
+    height: 77%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.menu-card-bolu, .menu-card-laklak, 
+.menu-card-kerupuk {
+    width: 25%;
+    height: 250px;
+    border-radius: 10px;
+    border: 3px solid;
+    box-shadow: 1px 2px 3px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.menu-card-bolu img, .menu-card-laklak img,
+.menu-card-kerupuk img {
+    width: 100%;
+    height: 72%;
+}
+
+.menu-card-bolu-sub, .menu-card-laklak-sub, 
+.menu-card-kerupuk-sub {
+    width: 100%;
+    height: 25%;
+    padding-top: 2px;
+    font-size: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-bolu, .title-laklak,
+.title-kerupuk {
+    width: 150px;
+    height: 100%;
+}
+
+.price-bolu, .price-laklak,
+.price-kerupuk {
+    width: 100px;
+    height: 100%;
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    width:100%;
+    background:#111;
+}
+
+.footer-container{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 40px 20px;
+    color:white;
+}
+
+/* =================== */
+/* BAGIAN ATAS */
+/* =================== */
+
+.footer-logo{
+    margin-bottom:45px;
+}
+
+.footer-logo h2{
+    font-size:32px;
+    margin-bottom:18px;
+    letter-spacing:2px;
+}
+
+.desc{
+    width:55%;
+    line-height:1.8;
+    color:#cfcfcf;
+}
+
+/* =================== */
+/* BAGIAN TENGAH */
+/* =================== */
+
+.footer-in{
+    display:flex;
+    justify-content:space-between;
+    gap:50px;
+    margin-bottom:45px;
+}
+
+.quicklinks,
+.kontak,
+.jamoperasional{
+    flex:1;
+}
+
+.quicklinks h3,
+.kontak h3,
+.jamoperasional h3{
+    margin-bottom:20px;
+    font-size:22px;
+    position:relative;
+}
+
+.quicklinks h3::after,
+.kontak h3::after,
+.jamoperasional h3::after{
+    content:"";
+    display:block;
+    width:55px;
+    height:3px;
+    background:#ffb703;
+    margin-top:8px;
+}
+
+.quicklinks ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 21px;
+    display: flex;
+    flex-direction: column;   /* membuat link ke bawah */
+    align-items: flex-start;  /* rata kiri */
+    gap: 15px;                /* jarak antar link */
+}
+
+.quicklinks ul li{
+    width: 100%;
+}
+
+.quicklinks ul li a{
+    text-decoration: none;
+    color: #d8d8d8;
+    transition: 0.3s;
+}
+
+.quicklinks ul li a:hover{
+    color: #ffb703;
+    padding-left: 8px;
+}
+
+.kontak p,
+.jamoperasional p{
+    margin-bottom:14px;
+    color:#d8d8d8;
+    line-height:1.7;
+}
+
+/* =================== */
+/* COPYRIGHT */
+/* =================== */
+
+.footer-bottom{
+    border-top:1px solid #444;
+    padding-top:20px;
+    text-align:center;
+}
+
+.footer-bottom p{
+    color:#a5a5a5;
+    font-size:15px;
+}
+
+/* =================== */
+/* RESPONSIVE */
+/* =================== */
+
+@media (max-width:768px){
+
+    .footer-container{
+        padding:40px 25px;
+    }
+
+    .desc{
+        width:100%;
+    }
+
+    .footer-in{
+        flex-direction:column;
+        gap:35px;
+    }
+
+}

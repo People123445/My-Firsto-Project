@@ -1,0 +1,514 @@
+.nav-container {
+    width: 100%;
+    height: 35px;
+    background-image: url("Images/Navbar.png");
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row-reverse;
+    overflow-y: hidden;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif !important;
+    overflow-x: hidden;
+}
+
+.nav-profile {
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav ul {
+    height: 30px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    gap: 60px;
+    padding-right:10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    transition: .3s;
+}
+
+nav ul li a:hover{
+    color:  white;
+    padding-left: 3px;
+}
+
+.nav-img {
+    width: 285px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-container {
+    width: 100%;
+    height: 80vh;
+    background-image: url(Images/brian-fathurohman-dPoNxtkaz0Q-unsplash.jpg);
+    font-size: 30px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Wajib ditambahkan */
+    overflow: hidden;
+}
+
+/* Membuat lapisan overlay hijau */
+.home-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #053a10; /* Warna hijau kamu */
+    opacity: 0.6; /* Tingkat transparansi overlay */
+    z-index: 1;
+}
+
+/* Memastikan konten/teks di dalamnya tetap berada di atas overlay */
+.home-container * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.home-txt-container {
+    width: 33%;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    align-items: center;
+    gap: 20px;
+}
+
+.home-txt-container h1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-container {
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.contact-info-container {
+    width: 50%;
+    height: 110vh;
+    padding-left: 40px;
+}
+
+.contact-info-container h1 {
+    width: 110px;
+    height: 25px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: #73B925;
+    background-color: #74b92526;
+    color: #3e7004; 
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.contact-info-container h2 {
+    margin-top: 10px;
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+.contact-info-container p {
+    margin-top: 10px;
+    font-size: 25px;
+    color: rgb(78, 78, 78);
+    margin-left: 5px;
+}
+
+.contact-info {
+    width: 100%;
+    height: 50vh;
+    margin-top: 10px;
+}
+
+.phone, .email, .address {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 10px;
+} 
+
+.phone-text, .email-text, .address-text {
+    width: 256px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-left: 15px;
+}
+
+.phone-text h4, .email-text h4, 
+.address-text h4 {
+    font-size: 18px;
+}
+
+.phone-text h5, .email-text h5,
+.address-text h5 {
+    font-size: 15px;
+    color: rgb(100, 88, 88);
+    margin-top: 10px;
+}
+
+.phone-img, .email-img,
+.address-img {
+    width: 47px;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #74b92576;
+}
+
+.phone img, .email img, 
+.address img {
+    width: 24px;
+    height: 24px;
+}
+
+.business-hours {
+    width: 95%;
+    height: 171px;
+    border: 1px solid;
+    border-radius: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.business-title {
+    width: 100%;
+    height: 30px;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.business-time-container {
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid;
+    display: flex;
+}
+
+.business-time-left {
+    width: 50%;
+    height: 100%;
+}
+
+.business-time-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-right: 8px;
+}
+
+.business-time-left p, 
+.business-time-right p{
+    font-size: 16px;
+}
+
+.disclamer {
+    width: 100%;
+    height: 40px;
+    border-top: 1px solid;
+}
+
+.disclamer p {
+    font-size: 16px; 
+}
+
+.contact-form-container {
+    width: 50%;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    width: 90%;
+    height: 90%;
+    border: 1px solid;
+    border-color: rgba(129, 127, 127, 0.603);
+    border-radius: 16px;
+    box-shadow: 4px 6px 12px 2px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    overflow-y: hidden;
+}
+
+.contact-form-title h2 {
+    font-size: 26px;
+}
+
+.contact-form-title p {
+    margin-top: 7px;
+    color: rgb(122, 121, 121);
+}
+
+.contact-form-name {
+    width: 100%;
+    height: 87px;
+    display: flex ;
+    margin-top: 16px;
+}
+
+.first-name, .last-name {
+    width: 50%;
+    height: 100%;
+}
+
+.first-name input, 
+.last-name input {
+    width: 90%;
+    height: 50px;
+    border: 1px solid;
+    border-color: rgba(123, 123, 123, 0.763);
+    border-radius: 10px;
+}
+
+.contact-form-email, 
+.contact-form-company {
+    width: 100%;
+    height: 87px;
+}
+
+.contact-form-email input, 
+.contact-form-company input {
+    width: 96%;
+    height: 50px;
+    border: 1px solid;
+    border-color: rgba(123, 123, 123, 0.763);
+    border-radius: 10px;
+}
+
+.contact-form-message {
+    width: 100%;
+    height: 150px;
+}
+
+.contact-form-message input {
+    width: 96%;
+    height: 128px;
+    border: 1px solid;
+    border-color: rgba(123, 123, 123, 0.763);
+    border-radius: 16px;
+}
+
+.contact-form-submit {
+    width: 100%;
+    height: 78px;
+}
+
+.contact-form-submit input {
+    width: 96%;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    margin-right: 18px;
+    margin-top: 10px;
+    border: 0;
+    border-radius: 16px;
+    background-color: #73B925;
+    box-shadow: 2px 3px 6px 1px #9ac668;   
+}
+
+.contact-form-submit input:hover {
+    width: 96%;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    margin-right: 18px;
+    margin-top: 10px;
+    border: 0;
+    border-radius: 16px;
+    background-color: #05761c;
+    box-shadow: 2px 3px 6px 1px #374f1c;
+}
+
+footer{
+    width:100%;
+    background:#111;
+}
+
+.footer-container{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 40px 20px;
+    color:white;
+}
+
+/* =================== */
+/* BAGIAN ATAS */
+/* =================== */
+
+.footer-logo{
+    margin-bottom:45px;
+}
+
+.footer-logo h2{
+    font-size:32px;
+    margin-bottom:18px;
+    letter-spacing:2px;
+}
+
+.desc{
+    width:55%;
+    line-height:1.8;
+    color:#cfcfcf;
+}
+
+/* =================== */
+/* BAGIAN TENGAH */
+/* =================== */
+
+.footer-in{
+    display:flex;
+    justify-content:space-between;
+    gap:50px;
+    margin-bottom:45px;
+}
+
+.quicklinks,
+.kontak,
+.jamoperasional{
+    flex:1;
+}
+
+.quicklinks h3,
+.kontak h3,
+.jamoperasional h3{
+    margin-bottom:20px;
+    font-size:22px;
+    position:relative;
+}
+
+.quicklinks h3::after,
+.kontak h3::after,
+.jamoperasional h3::after{
+    content:"";
+    display:block;
+    width:55px;
+    height:3px;
+    background:#ffb703;
+    margin-top:8px;
+}
+
+.quicklinks ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 21px;
+    display: flex;
+    flex-direction: column;   /* membuat link ke bawah */
+    align-items: flex-start;  /* rata kiri */
+    gap: 15px;                /* jarak antar link */
+}
+
+.quicklinks ul li{
+    width: 100%;
+}
+
+.quicklinks ul li a{
+    text-decoration: none;
+    color: #d8d8d8;
+    transition: 0.3s;
+}
+
+.quicklinks ul li a:hover{
+    color: #ffb703;
+    padding-left: 8px;
+}
+
+.kontak p,
+.jamoperasional p{
+    margin-bottom:14px;
+    color:#d8d8d8;
+    line-height:1.7;
+}
+
+/* =================== */
+/* COPYRIGHT */
+/* =================== */
+
+.footer-bottom{
+    border-top:1px solid #444;
+    padding-top:20px;
+    text-align:center;
+}
+
+.footer-bottom p{
+    color:#a5a5a5;
+    font-size:15px;
+}
+
+/* =================== */
+/* RESPONSIVE */
+/* =================== */
+
+@media (max-width:768px){
+
+    .footer-container{
+        padding:40px 25px;
+    }
+
+    .desc{
+        width:100%;
+    }
+
+    .footer-in{
+        flex-direction:column;
+        gap:35px;
+    }
+
+}
